@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contacts</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <header>
+    <center><h1>ADD SUBSCRIBER</h1></center>
+  	</header>
+    
+    <Button onclick="window.location.href='index.html'" id="back">
+    	BACK
+    </Button>
+    
+    <br><br>
+    
+    <form name="myForm">
+    
+    	Name:<br>
+    	<input type="text" name="name">
+    	<br>
+    	Phone:<br>
+    	<input type="text" name="phno">
+    	<h4 id="red_h">Subscriber to be added:</h4>
+    	<h4 id="red_h">Name:</h4> <h4></h4>
+    	<h4 id="red_h">Phone:</h4> <h4></h4>
+    	
+    	<Button type="submit" id="add" onclick="my_function()"> Add </Button>
+    	
+    </form>
+    
+    <script>
+	
+	
+		if (window.XMLHttpRequest) { 
+        	xmlhttp  =  new XMLHttpRequest();
+        } else { 
+            xmlhttp  =  new ActiveXObject("Microsoft.XMLHTTP");
+        }
+   
+        xmlhttp.open("GET","Contacts.xml",false);
+        xmlhttp.send();
+        xmlDoc = xmlhttp.responseXML;
+        
+		newEle = xmlDoc.createElement("Name");
+		newText = xmlDoc.createTextNode(document.forms["myForm"]["name"].value;);
+		newEle.appendChild(newText);
+		
+		newEle = xmlDoc.createElement("phno");
+		newText = xmlDoc.createTextNode(document.forms["myForm"]["phno"].value;);
+		newEle.appendChild(newText);
+	
+	</script>
+
+
+  </body>
+</html>

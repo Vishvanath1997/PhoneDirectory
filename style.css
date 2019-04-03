@@ -1,0 +1,32 @@
+#red_h{
+  color: red;
+}
+
+header{
+	color: white;
+	background-color: Black;
+}
+
+#add{
+	Color: white;
+	background-color: Green;
+}
+
+#delete{
+	Color: white;
+	background-color: Red;
+}
+
+#back{
+	Color: white;
+	background-color: Green;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
